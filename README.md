@@ -1,4 +1,4 @@
-# Translator API calls and stuff
+# Microsoft Translator API flow
 
 First get a translator API key from Azure portal, click on New, search for 'Cognitive Services' and hit enter. 
 
