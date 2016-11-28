@@ -14,7 +14,7 @@ Wait a little while for it to get set up and deployed. Once it's done, click int
 
 ![luiskeys](http://i.imgur.com/NpvgyXT.png)
 
-To use the Microsoft Translation API you need to put a token in the Authorization header that lasts 10 minutes. To get this token make a *POST request* to the following API endpoint:
+To use the Microsoft Translation API you need to get a token first, and the token lasts 10 minutes. To get this token make a *POST request* to the following API endpoint:
 
 `'https://api.cognitive.microsoft.com/sts/v1.0/issueToken?subscription-key=' + TRANSLATIONKEY`
 
@@ -22,4 +22,4 @@ YOURTRANSLATIONKEY is the key you got from the Azure portal. You'll need to get 
 
 `'http://api.microsofttranslator.com/v2/Http.svc/Translate'+'?text=' + urlencodedtext + '&from=' + FROMLOCALE +'&to=' + TOLOCALE`
 
-The list of locales (i.e. languages codes) is here: https://msdn.microsoft.com/en-us/library/hh456380.aspx. You need to url encode the text you want to translate, and remember to put "Bearer " before the token string in the Authorization header of the GET request. I think the response comes back in XML. 
+The list of locales (i.e. languages codes) is here: https://msdn.microsoft.com/en-us/library/hh456380.aspx. You need to url encode the text you want to translate, and remember to put "Bearer " before the token string you just obtained in the Authorization header of the GET request. I think the response comes back in XML. 
